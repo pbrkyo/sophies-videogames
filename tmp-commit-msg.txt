@@ -1,10 +1,1 @@
-Build complete ecommerce site with Mario Bros theme and ONVO Pay
-
-- Homepage with hero banner, featured products, category grid, promotions
-- Product catalog with filters, detail pages, and 18 sample products
-- Shopping cart with Zustand state management and CRC currency formatting
-- Checkout with SINPE Movil, credit card, and bank transfer tabs
-- Payment methods, about us, and contact pages with WhatsApp integration
-- Full SEO: metadata, JSON-LD LocalBusiness, sitemap, robots.txt
-- Mario Bros subtle color palette with shadcn/ui components
-- Responsive mobile-first design with sticky header and cart drawer
+Clean up scaffold files
