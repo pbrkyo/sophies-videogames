@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "consolas",
+    "name": "Consolas",
+    "description": "PlayStation, Nintendo Switch, Xbox y más",
+    "image": "/images/categories/consolas.jpg",
+    "icon": "Gamepad2"
+  },
+  {
+    "slug": "videojuegos",
+    "name": "Videojuegos",
+    "description": "Los últimos títulos y clásicos favoritos",
+    "image": "/images/categories/videojuegos.jpg",
+    "icon": "Disc3"
+  },
+  {
+    "slug": "accesorios",
+    "name": "Accesorios",
+    "description": "Controles, audífonos, cargadores y más",
+    "image": "/images/categories/accesorios.jpg",
+    "icon": "Headphones"
+  },
+  {
+    "slug": "retro",
+    "name": "Retro & Usado",
+    "description": "Consolas y juegos clásicos de colección",
+    "image": "/images/categories/retro.jpg",
+    "icon": "Joystick"
+  },
+  {
+    "slug": "tarjetas",
+    "name": "Tarjetas & Códigos",
+    "description": "PlayStation Plus, Nintendo eShop, Xbox Game Pass",
+    "image": "/images/categories/tarjetas.jpg",
+    "icon": "CreditCard"
+  },
+  {
+    "slug": "coleccionables",
+    "name": "Coleccionables",
+    "description": "Figuras, amiibo, ediciones especiales",
+    "image": "/images/categories/coleccionables.jpg",
+    "icon": "Trophy"
+  }
+]

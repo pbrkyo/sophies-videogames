@@ -1,0 +1,146 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useCartStore } from "@/lib/cart-store";
+import { formatCRCShort } from "@/lib/format";
+import { cn } from "@/lib/utils";
+
+interface CartDrawerProps {
+  onClose: () => void;
+}
+
+export function CartDrawer({ onClose }: CartDrawerProps) {
+  const { items, updateQuantity, removeItem, totalPrice } = useCartStore();
+
+  if (items.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full p-8 text-center">
+        <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mb-4">
+          <ShoppingBag className="h-8 w-8 text-muted-foreground" />
+        </div>
+        <h3 className="font-semibold text-lg mb-2">Tu carrito está vacío</h3>
+        <p className="text-sm text-muted-foreground mb-6">
+          Agrega productos para comenzar tu compra
+        </p>
+        <Link
+          href="/productos"
+          onClick={onClose}
+          className={cn(buttonVariants())}
+        >
+          Explorar Productos
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col h-full">
+      <div className="p-6 pb-4">
+        <h2 className="text-lg font-semibold">
+          Carrito ({items.reduce((s, i) => s + i.quantity, 0)})
+        </h2>
+      </div>
+
+      <Separator />
+
+      <ScrollArea className="flex-1 px-6">
+        <div className="py-4 space-y-4">
+          {items.map((item) => (
+            <div key={item.product.id} className="flex gap-3">
+              <div className="w-16 h-16 rounded-lg bg-secondary flex items-center justify-center shrink-0 overflow-hidden">
+                <Image
+                  src={item.product.images[0]}
+                  alt={item.product.name}
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = "none";
+                  }}
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="text-sm font-medium truncate">
+                  {item.product.name}
+                </h4>
+                <p className="text-sm font-bold text-mario-blue mt-0.5">
+                  {formatCRCShort(item.product.price)}
+                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-7 w-7"
+                    onClick={() =>
+                      updateQuantity(item.product.id, item.quantity - 1)
+                    }
+                  >
+                    <Minus className="h-3 w-3" />
+                  </Button>
+                  <span className="text-sm font-medium w-6 text-center">
+                    {item.quantity}
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-7 w-7"
+                    onClick={() =>
+                      updateQuantity(item.product.id, item.quantity + 1)
+                    }
+                  >
+                    <Plus className="h-3 w-3" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-7 w-7 ml-auto text-destructive"
+                    onClick={() => removeItem(item.product.id)}
+                  >
+                    <Trash2 className="h-3 w-3" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </ScrollArea>
+
+      <div className="p-6 pt-4 border-t">
+        <div className="flex items-center justify-between mb-4">
+          <span className="font-medium">Subtotal</span>
+          <span className="text-lg font-bold">
+            {formatCRCShort(totalPrice())}
+          </span>
+        </div>
+        <p className="text-xs text-muted-foreground mb-4">
+          Impuestos y envío calculados al pagar
+        </p>
+        <div className="flex flex-col gap-2">
+          <Link
+            href="/checkout"
+            onClick={onClose}
+            className={cn(
+              buttonVariants(),
+              "w-full bg-mario-red hover:bg-mario-red/90"
+            )}
+          >
+            Proceder al Pago
+          </Link>
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={onClose}
+          >
+            Seguir Comprando
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
