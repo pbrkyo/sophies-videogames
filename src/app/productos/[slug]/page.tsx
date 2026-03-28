@@ -1,6 +1,6 @@
 "use client";
 
-import { use } from "react";
+import { use, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ShoppingCart, Check, Truck, Shield, MessageCircle } from "lucide-react";
@@ -21,6 +21,8 @@ export default function ProductDetailPage({
   const { slug } = use(params);
   const product = getProductBySlug(slug);
   const addItem = useCartStore((s) => s.addItem);
+  const openCart = useCartStore((s) => s.openCart);
+  const [added, setAdded] = useState(false);
 
   if (!product) {
     return (
@@ -121,12 +123,27 @@ export default function ProductDetailPage({
           <div className="flex flex-col sm:flex-row gap-3 mt-6">
             <Button
               size="lg"
-              className="flex-1 bg-mario-red hover:bg-mario-red/90"
-              disabled={!product.inStock}
-              onClick={() => addItem(product)}
+              className="flex-1 transition-all"
+              style={{
+                background: added
+                  ? "linear-gradient(135deg, #00A800, #43D043)"
+                  : undefined,
+              }}
+              disabled={!product.inStock || added}
+              onClick={() => {
+                addItem(product);
+                setAdded(true);
+                setTimeout(() => {
+                  setAdded(false);
+                  openCart();
+                }, 800);
+              }}
             >
-              <ShoppingCart className="h-5 w-5 mr-2" />
-              Agregar al Carrito
+              {added ? (
+                <><Check className="h-5 w-5 mr-2" />¡Agregado!</>
+              ) : (
+                <><ShoppingCart className="h-5 w-5 mr-2" />Agregar al Carrito</>
+              )}
             </Button>
             <a
               href={`https://wa.me/50672526740?text=${encodeURIComponent(

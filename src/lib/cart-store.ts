@@ -11,6 +11,9 @@ export interface CartItem {
 
 interface CartStore {
   items: CartItem[];
+  isOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
   addItem: (product: Product) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
@@ -23,6 +26,9 @@ export const useCartStore = create<CartStore>()(
   persist(
     (set, get) => ({
       items: [],
+      isOpen: false,
+      openCart: () => set({ isOpen: true }),
+      closeCart: () => set({ isOpen: false }),
 
       addItem: (product: Product) => {
         set((state) => {

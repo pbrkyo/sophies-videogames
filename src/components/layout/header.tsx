@@ -22,7 +22,9 @@ const navLinks = [
 
 export function Header() {
   const totalItems = useCartStore((s) => s.totalItems());
-  const [cartOpen, setCartOpen] = useState(false);
+  const cartOpen = useCartStore((s) => s.isOpen);
+  const openCart = useCartStore((s) => s.openCart);
+  const closeCart = useCartStore((s) => s.closeCart);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -145,7 +147,7 @@ export function Header() {
               <Search className="h-5 w-5" />
             </Button>
 
-            <Sheet open={cartOpen} onOpenChange={setCartOpen}>
+            <Sheet open={cartOpen} onOpenChange={(open) => open ? openCart() : closeCart()}>
               <SheetTrigger className="relative inline-flex items-center justify-center size-9 rounded-xl hover:bg-muted transition-colors">
                 <ShoppingCart className="h-5 w-5" />
                 {totalItems > 0 && (
@@ -158,7 +160,7 @@ export function Header() {
                 )}
               </SheetTrigger>
               <SheetContent className="w-full sm:max-w-md p-0">
-                <CartDrawer onClose={() => setCartOpen(false)} />
+                <CartDrawer onClose={closeCart} />
               </SheetContent>
             </Sheet>
           </div>

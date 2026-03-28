@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingCart, Eye } from "lucide-react";
+import { ShoppingCart, Eye, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/lib/products";
 import { useCartStore } from "@/lib/cart-store";
 import { formatCRCShort } from "@/lib/format";
+import { useState } from "react";
 
 interface ProductCardProps {
   product: Product;
@@ -14,6 +15,17 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const addItem = useCartStore((s) => s.addItem);
+  const openCart = useCartStore((s) => s.openCart);
+  const [added, setAdded] = useState(false);
+
+  function handleAddToCart() {
+    addItem(product);
+    setAdded(true);
+    setTimeout(() => {
+      setAdded(false);
+      openCart();
+    }, 800);
+  }
 
   const discount = product.originalPrice
     ? Math.round(
@@ -112,12 +124,28 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Add to cart */}
         <button
           className="w-full mt-4 py-2.5 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
-          style={{ background: product.inStock ? "linear-gradient(135deg, #2038EC, #5C94FC)" : undefined, backgroundColor: product.inStock ? undefined : "oklch(0.96 0.004 240)" }}
-          disabled={!product.inStock}
-          onClick={() => addItem(product)}
+          style={{
+            background: !product.inStock
+              ? undefined
+              : added
+              ? "linear-gradient(135deg, #00A800, #43D043)"
+              : "linear-gradient(135deg, #2038EC, #5C94FC)",
+            backgroundColor: product.inStock ? undefined : "oklch(0.96 0.004 240)",
+          }}
+          disabled={!product.inStock || added}
+          onClick={handleAddToCart}
         >
-          <ShoppingCart className="h-4 w-4" />
-          {product.inStock ? "Agregar al carrito" : "Agotado"}
+          {added ? (
+            <>
+              <Check className="h-4 w-4" />
+              ¡Agregado!
+            </>
+          ) : (
+            <>
+              <ShoppingCart className="h-4 w-4" />
+              {product.inStock ? "Agregar al carrito" : "Agotado"}
+            </>
+          )}
         </button>
       </div>
     </div>
