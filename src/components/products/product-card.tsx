@@ -87,45 +87,68 @@ export function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       {/* Card body */}
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-1">
           {product.brand}
         </p>
 
         <Link href={`/productos/${product.slug}`}>
-          <h3 className="text-sm font-bold leading-snug line-clamp-2 group-hover:text-[#5C94FC] transition-colors min-h-[2.5rem]">
+          <h3 className="text-xs sm:text-sm font-bold leading-snug line-clamp-2 group-hover:text-[#5C94FC] transition-colors min-h-[2.25rem] sm:min-h-[2.5rem]">
             {product.name}
           </h3>
         </Link>
 
-        {/* Price row */}
-        <div className="mt-3 flex items-baseline gap-2">
-          <span
-            className="text-xl font-extrabold price-tag"
-            style={{ color: "#2038EC" }}
-          >
-            {formatCRCShort(product.price)}
-          </span>
-          {product.originalPrice && (
-            <span className="text-xs text-muted-foreground line-through price-tag">
-              {formatCRCShort(product.originalPrice)}
+        {/* Price + mobile cart button */}
+        <div className="mt-2 sm:mt-3 flex items-center justify-between gap-2">
+          <div className="flex items-baseline gap-1.5 min-w-0">
+            <span
+              className="text-base sm:text-xl font-extrabold price-tag truncate"
+              style={{ color: "#2038EC" }}
+            >
+              {formatCRCShort(product.price)}
             </span>
-          )}
+            {product.originalPrice && (
+              <span className="hidden sm:inline text-xs text-muted-foreground line-through price-tag shrink-0">
+                {formatCRCShort(product.originalPrice)}
+              </span>
+            )}
+          </div>
+
+          {/* Mobile-only compact cart button */}
+          <button
+            className="sm:hidden h-10 w-10 rounded-xl flex items-center justify-center shrink-0 transition-all active:scale-90 disabled:opacity-40 disabled:cursor-not-allowed"
+            style={{
+              background: !product.inStock
+                ? "#e5e7eb"
+                : added
+                ? "linear-gradient(135deg, #00A800, #43D043)"
+                : "linear-gradient(135deg, #2038EC, #5C94FC)",
+            }}
+            disabled={!product.inStock || added}
+            onClick={handleAddToCart}
+            aria-label={tr("add_to_cart")}
+          >
+            {added ? (
+              <Check className="h-4 w-4 text-white" />
+            ) : (
+              <ShoppingCart className={`h-4 w-4 ${product.inStock ? "text-white" : "text-gray-400"}`} />
+            )}
+          </button>
         </div>
 
         {/* Stock indicator */}
         <div className="flex items-center gap-1.5 mt-1.5">
           <span
-            className={`h-1.5 w-1.5 rounded-full ${product.inStock ? "bg-[#00A800]" : "bg-muted-foreground"}`}
+            className={`h-1.5 w-1.5 rounded-full shrink-0 ${product.inStock ? "bg-[#00A800]" : "bg-muted-foreground"}`}
           />
           <span className="text-[11px] font-medium text-muted-foreground">
             {product.inStock ? tr("in_stock") : tr("out_of_stock")}
           </span>
         </div>
 
-        {/* Add to cart */}
+        {/* Desktop full-width cart button */}
         <button
-          className="w-full mt-4 min-h-[44px] py-2.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all hover:opacity-90 hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:opacity-50"
+          className="hidden sm:flex w-full mt-3 h-11 rounded-xl text-sm font-bold items-center justify-center gap-2 transition-all hover:opacity-90 hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           style={{
             background: !product.inStock
               ? "#e5e7eb"
