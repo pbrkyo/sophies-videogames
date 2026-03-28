@@ -8,7 +8,9 @@
     "price": 244900,
     "originalPrice": 265000,
     "description": "La consola PS5 Digital Edition con 825GB SSD, resolución hasta 4K 120fps, ray tracing, audio 3D Tempest y control DualSense inalámbrico incluido. Sin lector de disco.",
-    "images": ["/images/products/ps5-digital-825gb.jpg"],
+    "images": [
+      "/images/products/ps5-digital-244900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -23,7 +25,9 @@
     "price": 274900,
     "originalPrice": 295000,
     "description": "PS5 Slim con lector de disco Blu-ray Ultra HD, 1TB SSD, 4K 120fps, Ray Tracing y control DualSense. Diseño más compacto.",
-    "images": ["/images/products/ps5-slim-disc-1tb.jpg"],
+    "images": [
+      "/images/products/ps5-slim-disc-274900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -38,7 +42,9 @@
     "price": 269900,
     "originalPrice": 290000,
     "description": "La nueva Nintendo Switch 2 con pantalla LCD más grande, Joy-Con mejorados con botón C para chat, soporte 4K en TV y retrocompatibilidad con juegos de Switch 1.",
-    "images": ["/images/products/nintendo-switch-2.jpg"],
+    "images": [
+      "/images/products/ns2-accessories-store.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -53,7 +59,9 @@
     "price": 145000,
     "originalPrice": 165000,
     "description": "Nintendo Switch original con Joy-Con Neon Rojo/Azul. Juega en TV, portátil o modo mesa. Incluye dock, grip y correas.",
-    "images": ["/images/products/nintendo-switch-neon.jpg"],
+    "images": [
+      "/images/products/nsw-store-display.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -68,7 +76,9 @@
     "price": 129900,
     "originalPrice": 150000,
     "description": "Juega tus juegos de PS5 desde cualquier lugar con PlayStation Portal. Pantalla de 8 pulgadas con gatillos y vibración DualSense vía Wi-Fi.",
-    "images": ["/images/products/playstation-portal.jpg"],
+    "images": [
+      "/images/products/ps-portal-129900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -83,7 +93,9 @@
     "price": 259900,
     "originalPrice": 280000,
     "description": "Bundle PS5 Digital Edition 825GB con contenido exclusivo de Fortnite y el juego Gran Turismo 7 incluido. ¡La mejor relación precio-valor!",
-    "images": ["/images/products/bundle-ps5-digital-fortnite-gt7.jpg"],
+    "images": [
+      "/images/products/ps5-digital-fortnite-gt7-259900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -98,7 +110,9 @@
     "price": 249900,
     "originalPrice": 270000,
     "description": "PS5 Digital Edition 825GB con contenido exclusivo de Fortnite incluido. Paquete ideal para empezar tu aventura en PS5.",
-    "images": ["/images/products/bundle-ps5-digital-fortnite.jpg"],
+    "images": [
+      "/images/products/ps5-digital-fortnite-249900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -113,7 +127,9 @@
     "price": 284900,
     "originalPrice": 310000,
     "description": "PS5 Digital Edition 825GB con contenido Fortnite y el nuevo Resident Evil Requiem. Terror y acción en un solo paquete.",
-    "images": ["/images/products/bundle-ps5-digital-re-requiem.jpg"],
+    "images": [
+      "/images/products/ps5-digital-re-requiem-284900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -128,7 +144,9 @@
     "price": 279900,
     "originalPrice": 300000,
     "description": "PS5 Slim con lector de disco 1TB con contenido exclusivo de Fortnite. Juega tanto físico como digital.",
-    "images": ["/images/products/bundle-ps5-disc-fortnite-1tb.jpg"],
+    "images": [
+      "/images/products/ps5-disc-fortnite-279900.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -143,7 +161,9 @@
     "price": 269900,
     "originalPrice": 290000,
     "description": "PS5 Slim con lector de disco y contenido Fortnite a precio especial. Ideal para disfrutar de los mejores títulos físicos.",
-    "images": ["/images/products/bundle-ps5-disc-fortnite-269.jpg"],
+    "images": [
+      "/images/products/ps5-slim-disc-fc26-store.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -158,7 +178,9 @@
     "price": 289900,
     "originalPrice": 310000,
     "description": "PS5 Slim con lector de disco 1TB y el juego EA Sports FC 24. Fútbol y potencia gráfica de última generación.",
-    "images": ["/images/products/bundle-ps5-disc-fc24.jpg"],
+    "images": [
+      "/images/products/ps5-disc-fc24-289900.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -173,7 +195,9 @@
     "price": 299900,
     "originalPrice": 320000,
     "description": "PS5 Slim con contenido Fortnite y el juego Spider-Man: Miles Morales. Experimenta la velocidad y los poderes de Miles en 4K.",
-    "images": ["/images/products/bundle-ps5-slim-spiderman-mm.jpg"],
+    "images": [
+      "/images/products/ps5-disc-spiderman-mm-299900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -188,7 +212,9 @@
     "price": 299900,
     "originalPrice": 320000,
     "description": "PS5 Slim con contenido Fortnite y EA Sports FC 26 — el fútbol definitivo en la consola más potente.",
-    "images": ["/images/products/bundle-ps5-slim-fc26.jpg"],
+    "images": [
+      "/images/products/ps5-disc-fc26-299900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -203,7 +229,9 @@
     "price": 314900,
     "originalPrice": 335000,
     "description": "Nintendo Switch 2 con The Legend of Zelda: Breath of the Wild edición Nintendo Switch 2 y el Amiibo de Link. El bundle perfecto para fans de Zelda.",
-    "images": ["/images/products/bundle-ns2-zelda-botw.jpg"],
+    "images": [
+      "/images/products/ns2-zelda-botw-amiibo-314900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -218,7 +246,9 @@
     "price": 314900,
     "originalPrice": 335000,
     "description": "Nintendo Switch 2 con The Legend of Zelda: Tears of the Kingdom edición NS2 y Amiibo de Link Tears. Aventura épica desde el primer día.",
-    "images": ["/images/products/bundle-ns2-zelda-totk.jpg"],
+    "images": [
+      "/images/products/ns2-zelda-totk-amiibo-314900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -233,7 +263,9 @@
     "price": 284900,
     "originalPrice": 305000,
     "description": "Nintendo Switch 2 con EA Sports FC 26 para Nintendo Switch 2. Fútbol en cualquier lugar con la nueva generación de Nintendo.",
-    "images": ["/images/products/bundle-ns2-fc26.jpg"],
+    "images": [
+      "/images/products/ns2-fc26-284900.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -248,7 +280,9 @@
     "price": 309900,
     "originalPrice": 330000,
     "description": "Nintendo Switch 2 con Resident Evil Requiem, el nuevo capítulo de la saga de terror de Capcom. Survival horror donde quieras.",
-    "images": ["/images/products/bundle-ns2-re-requiem.jpg"],
+    "images": [
+      "/images/products/ns2-re-requiem-309900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -263,7 +297,9 @@
     "price": 159900,
     "originalPrice": 180000,
     "description": "Nintendo Switch Neon con el juego físico Super Mario Bros. Wonder incluido. El bundle ideal para regalar o comenzar en Nintendo.",
-    "images": ["/images/products/bundle-nsw-mario-wonder.jpg"],
+    "images": [
+      "/images/products/nsw-mario-wonder-159900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -277,7 +313,9 @@
     "category": "accesorios",
     "price": 59900,
     "description": "Control DualSense edición limitada Ghost of Yōtei con diseño exclusivo inspirado en el arte japonés. Dorado con grabados de montañas y guerrero.",
-    "images": ["/images/products/dualsense-ghost-yotei.jpg"],
+    "images": [
+      "/images/products/dualsense-collection.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -291,7 +329,9 @@
     "category": "accesorios",
     "price": 54900,
     "description": "Control DualSense en edición especial Icon Blue. Color azul profundo con textura de iconos de botones. Elegancia y estilo para tu PS5.",
-    "images": ["/images/products/dualsense-icon-blue.jpg"],
+    "images": [
+      "/images/products/dualsense-icon-blue-54900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -305,7 +345,9 @@
     "category": "accesorios",
     "price": 54900,
     "description": "Control DualSense edición limitada Astro Bot con pantalla LED en el touchpad y diseño exclusivo azul/blanco. ¡Perfecto para coleccionistas!",
-    "images": ["/images/products/dualsense-astro-bot.jpg"],
+    "images": [
+      "/images/products/dualsense-astro-bot-54900.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -319,7 +361,9 @@
     "category": "accesorios",
     "price": 59900,
     "description": "Control DualSense edición limitada por el 20 aniversario de God of War. Diseño blanco y rojo inspirado en el control original de PS2. Solo para verdaderos fans.",
-    "images": ["/images/products/dualsense-god-of-war-20th.jpg"],
+    "images": [
+      "/images/products/dualsense-gow-ragnarok.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -333,7 +377,9 @@
     "category": "accesorios",
     "price": 59900,
     "description": "Control DualSense edición limitada Marathon con diseño táctico verde neón y negro. Edición exclusiva del nuevo shooter de Bungie.",
-    "images": ["/images/products/dualsense-marathon.jpg"],
+    "images": [
+      "/images/products/dualsense-marathon.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -347,7 +393,9 @@
     "category": "accesorios",
     "price": 64900,
     "description": "Control DualSense edición limitada Genshin Impact con diseño inspirado en el mundo de Teyvat. Edición rara para coleccionistas.",
-    "images": ["/images/products/dualsense-genshin-impact.jpg"],
+    "images": [
+      "/images/products/dualsense-collection.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -361,7 +409,9 @@
     "category": "accesorios",
     "price": 64900,
     "description": "Control DualSense edición limitada Death Stranding 2: On the Beach. Diseño exclusivo negro con detalles dorados de la obra maestra de Hideo Kojima.",
-    "images": ["/images/products/dualsense-death-stranding-2.jpg"],
+    "images": [
+      "/images/products/dualsense-collection.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -375,7 +425,9 @@
     "category": "accesorios",
     "price": 45000,
     "description": "Control inalámbrico DualSense en color Rojo Cósmico con retroalimentación háptica y gatillos adaptativos.",
-    "images": ["/images/products/dualsense-cosmic-red.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -389,7 +441,9 @@
     "category": "accesorios",
     "price": 45000,
     "description": "Control inalámbrico DualSense en color Morado Galáctico. Diseño elegante con la tecnología de retroalimentación háptica.",
-    "images": ["/images/products/dualsense-galactic-purple.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -403,7 +457,9 @@
     "category": "accesorios",
     "price": 45000,
     "description": "Control inalámbrico DualSense en color Azul Cielo con retroalimentación háptica y gatillos adaptativos.",
-    "images": ["/images/products/dualsense-starlight-blue.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -417,7 +473,9 @@
     "category": "accesorios",
     "price": 45000,
     "description": "Control inalámbrico DualSense en diseño camuflaje gris. Edición especial con patrón militar elegante.",
-    "images": ["/images/products/dualsense-gray-camo.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -431,7 +489,9 @@
     "category": "accesorios",
     "price": 45000,
     "description": "Control inalámbrico DualSense en color Negro Medianoche con retroalimentación háptica y gatillos adaptativos.",
-    "images": ["/images/products/dualsense-midnight-black.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -445,7 +505,9 @@
     "category": "accesorios",
     "price": 42000,
     "description": "Control inalámbrico DualSense blanco original para PS5 con retroalimentación háptica y gatillos adaptativos.",
-    "images": ["/images/products/dualsense-white.jpg"],
+    "images": [
+      "/images/products/dualsense-colors.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -459,7 +521,9 @@
     "category": "accesorios",
     "price": 59900,
     "description": "Control Pro de Nintendo Switch 2 edición especial Resident Evil Requiem. Diseño negro con grabados temáticos. Para coleccionistas y gamers.",
-    "images": ["/images/products/ns2-pro-controller-re-requiem.jpg"],
+    "images": [
+      "/images/products/ns2-pro-controller-re-requiem.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -473,7 +537,9 @@
     "category": "accesorios",
     "price": 29900,
     "description": "Control alámbrico mejorado de PowerA con diseño de Zelda para Nintendo Switch. Incluye Slim Case con capacidad para 10 juegos y shell protector.",
-    "images": ["/images/products/zelda-powera-controller-case.jpg"],
+    "images": [
+      "/images/products/powera-zelda-controller.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -487,7 +553,9 @@
     "category": "accesorios",
     "price": 29900,
     "description": "Cámara con diseño de Planta Piraña de Super Mario para Nintendo Switch 2. Accesorio oficial HORI con diseño adorable y funcional.",
-    "images": ["/images/products/piranha-plant-camera-ns2.jpg"],
+    "images": [
+      "/images/products/hori-piranha-plant-camera.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -501,7 +569,9 @@
     "category": "accesorios",
     "price": 38000,
     "description": "Par de Joy-Con para Nintendo Switch en color Morado Neón y Naranja Neón. Controles vibrantes para el multijugador local.",
-    "images": ["/images/products/joycon-purple-orange.jpg"],
+    "images": [
+      "/images/products/dualsense-colors-store.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -515,7 +585,9 @@
     "category": "accesorios",
     "price": 38000,
     "description": "Par de Joy-Con para Nintendo Switch en color Verde Neón y Rosado Neón. Perfectos para compartir el juego con familia y amigos.",
-    "images": ["/images/products/joycon-green-pink.jpg"],
+    "images": [
+      "/images/products/dualsense-colors-store.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -529,7 +601,9 @@
     "category": "accesorios",
     "price": 15000,
     "description": "Control Wii Remote con Nunchuk en color blanco. Compatible con Nintendo Wii y Wii U. Incluye correa de seguridad.",
-    "images": ["/images/products/wii-remote-nunchuk-white.jpg"],
+    "images": [
+      "/images/products/wii-remote-nunchuk.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -543,7 +617,9 @@
     "category": "accesorios",
     "price": 15000,
     "description": "Control Wii Remote con Nunchuk en color negro. Compatible con Nintendo Wii y Wii U. Incluye correa de seguridad.",
-    "images": ["/images/products/wii-remote-nunchuk-black.jpg"],
+    "images": [
+      "/images/products/wii-remote-nunchuk.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -557,7 +633,9 @@
     "category": "accesorios",
     "price": 22000,
     "description": "Convierte cualquier TV en Smart TV con el Fire TV Stick HD. Alexa integrada, Wi-Fi 5, 8GB de almacenamiento. Netflix, Prime Video, Disney+ y más.",
-    "images": ["/images/products/amazon-fire-tv-stick-hd.jpg"],
+    "images": [
+      "/images/products/amazon-fire-tv-stick.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -571,7 +649,9 @@
     "category": "videojuegos",
     "price": 42000,
     "description": "El nuevo capítulo de la saga Resident Evil para PS5. Survival horror en su máxima expresión con gráficos impresionantes y una historia escalofriante.",
-    "images": ["/images/products/re-requiem-ps5.jpg"],
+    "images": [
+      "/images/products/re-requiem-store-stock.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -585,7 +665,9 @@
     "category": "videojuegos",
     "price": 42000,
     "description": "Resident Evil Requiem para Nintendo Switch 2. El terror de Capcom ahora portátil con la potencia de la nueva consola de Nintendo.",
-    "images": ["/images/products/re-requiem-ns2.jpg"],
+    "images": [
+      "/images/products/re-requiem-store-stock.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -599,7 +681,9 @@
     "category": "videojuegos",
     "price": 45000,
     "description": "El épico RPG de acción de mundo abierto de Pearl Abyss. Combate brutal, historia profunda y un mundo vasto que explorar en PS5.",
-    "images": ["/images/products/crimson-desert-ps5.jpg"],
+    "images": [
+      "/images/products/crimson-desert-fatalframe-copies.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -613,7 +697,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "El clásico survival horror regresa totalmente renovado para Nintendo Switch 2. Enfrenta espíritus con solo tu cámara en este remake definitivo.",
-    "images": ["/images/products/fatal-frame-2-ns2.jpg"],
+    "images": [
+      "/images/products/crimson-desert-fatalframe-copies.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -627,7 +713,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "EA Sports FC 26 para PS5 con HyperMotion4, nuevo modo de juego UEFA Champions y mejoras en IA. El fútbol más realista de la historia.",
-    "images": ["/images/products/fc26-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-sports.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -641,7 +729,9 @@
     "category": "videojuegos",
     "price": 30000,
     "description": "EA Sports FC 26 para PS4. El mejor fútbol también en la generación anterior.",
-    "images": ["/images/products/fc26-ps4.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-sports.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -655,7 +745,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "EA Sports FC 26 para Nintendo Switch 2. Fútbol de alta calidad en modo portátil y TV.",
-    "images": ["/images/products/fc26-ns2.jpg"],
+    "images": [
+      "/images/products/ns2-fc26-284900.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -669,7 +761,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "Kratos y Atreus enfrentan el Ragnarök en esta épica aventura nórdica exclusiva de PlayStation. Gráficos impresionantes y combate brutal.",
-    "images": ["/images/products/god-of-war-ragnarok-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-gow-demon-souls.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -683,7 +777,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "El remake definitivo de Demon's Souls para PS5. Gráficos reconstruidos desde cero, desafíos legendarios y la experiencia Souls en su máxima expresión.",
-    "images": ["/images/products/demon-souls-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-gow-demon-souls.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -697,7 +793,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "La nueva entrega de Monster Hunter ambientada en los Campos Salvajes. Caza criaturas épicas en un mundo vivo y reactivo con gráficos impresionantes.",
-    "images": ["/images/products/monster-hunter-wilds-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-gow-demon-souls.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -711,7 +809,9 @@
     "category": "videojuegos",
     "price": 28000,
     "description": "La aventura de Aloy completamente renovada para PS5. Gráficos mejorados, animaciones nuevas y toda la experiencia de Horizon con tecnología de última generación.",
-    "images": ["/images/products/horizon-zero-dawn-remastered.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-gow-demon-souls.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -725,7 +825,9 @@
     "category": "videojuegos",
     "price": 48000,
     "description": "La obra maestra de Naughty Dog totalmente remasterizada para PS5 con modo roguelite No Return, niveles eliminados y modos gráficos mejorados.",
-    "images": ["/images/products/last-of-us-2-remastered.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-gow-demon-souls.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -739,7 +841,9 @@
     "category": "videojuegos",
     "price": 30000,
     "description": "Miles Morales asume el manto de Spider-Man en esta aventura épica exclusiva de PlayStation. Poderes únicos, historia emotiva y Nueva York nevada.",
-    "images": ["/images/products/spider-man-miles-morales-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-family.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -753,7 +857,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "Peter Parker y Miles Morales enfrentan a Kraven el Cazador y Venom. La aventura más grande de Spider-Man exclusiva para PS5.",
-    "images": ["/images/products/spider-man-2-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-family.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -767,7 +873,9 @@
     "category": "videojuegos",
     "price": 22000,
     "description": "Ethan Winters enfrenta el horror en un misterioso pueblo europeo. RE Village para PS5 con Gold Edition que incluye el DLC Shadows of Rose.",
-    "images": ["/images/products/resident-evil-village-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-horror.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -781,7 +889,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "Resident Evil Village Gold Edition para PS5 con el juego base y todos los DLCs: Shadows of Rose, Mercenarios, y modos adicionales.",
-    "images": ["/images/products/re-village-gold-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-horror.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -795,7 +905,9 @@
     "category": "videojuegos",
     "price": 20000,
     "description": "Jill Valentine huye de Nemesis en este remake de acción del clásico de PS1. Gráficos modernos y terror puro para PS5.",
-    "images": ["/images/products/resident-evil-3-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-horror.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -809,7 +921,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "El remake definitivo del clásico de terror psicológico por Bloober Team. James Sunderland regresa a Silent Hill con gráficos over the shoulder.",
-    "images": ["/images/products/silent-hill-2-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-horror.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -823,7 +937,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "La nueva entrega del legendario juego de pelea. Tekken 8 con Heat System, modo historia cinematográfico y gráficos de próxima generación.",
-    "images": ["/images/products/tekken-8-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-fighting.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -837,7 +953,9 @@
     "category": "videojuegos",
     "price": 15000,
     "description": "Mortal Kombat 11 Ultimate Edition para PS5 con todo el contenido: juego base, todos los DLCs y Aftermath. Violencia brutal en 4K.",
-    "images": ["/images/products/mortal-kombat-11-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-fighting.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -851,7 +969,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "Street Fighter 6 con el nuevo sistema Drive, World Tour para un jugador y Battle Hub para combates en línea. El rey de los juegos de pelea.",
-    "images": ["/images/products/street-fighter-6-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-fighting.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -865,7 +985,9 @@
     "category": "videojuegos",
     "price": 28000,
     "description": "Dragon Ball Z: Kakarot Daima Edition para PS5 con el DLC de Dragon Ball Daima incluido. Revive toda la saga de Goku en este RPG épico.",
-    "images": ["/images/products/dbz-kakarot-daima-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-fighting.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -879,7 +1001,9 @@
     "category": "videojuegos",
     "price": 30000,
     "description": "El simulador de conducción más realista en PS5. Gran Turismo 7 con más de 400 autos, ray tracing y modo de carrera completo.",
-    "images": ["/images/products/gran-turismo-7-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-racing.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -893,7 +1017,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "GTA V para PS5 con mejoras visuales, carga rápida, 60fps y expansión GTA Online incluida. El juego más vendido de todos los tiempos.",
-    "images": ["/images/products/gta-v-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-gtav.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -907,7 +1033,9 @@
     "category": "videojuegos",
     "price": 25000,
     "description": "GTA V Premium Edition para PS4 con el Criminal Enterprise Starter Pack. El mundo de Los Santos con todo el contenido de GTA Online.",
-    "images": ["/images/products/gta-v-ps4.jpg"],
+    "images": [
+      "/images/products/shelf-gtav.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -921,7 +1049,9 @@
     "category": "videojuegos",
     "price": 28000,
     "description": "Minecraft para PS5 con todos los biomas, mods de Marketplace y juego en línea. Construye, explora y sobrevive sin límites.",
-    "images": ["/images/products/minecraft-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-family.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -935,7 +1065,9 @@
     "category": "videojuegos",
     "price": 30000,
     "description": "El juego de lucha libre más completo. WWE 2K25 con el roster más grande, modo MyRise mejorado y actualizaciones constantes de superestrellas.",
-    "images": ["/images/products/wwe-2k25-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-sports.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -949,7 +1081,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "La nueva entrega de Call of Duty: Black Ops con campañia cinematográfica, Warzone integrado y multijugador competitivo.",
-    "images": ["/images/products/cod-black-ops-7-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-action.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -963,7 +1097,9 @@
     "category": "videojuegos",
     "price": 40000,
     "description": "RPG por turnos con combate reactivo ambientado en un mundo de Belle Époque surrealista. Una de las sorpresas más grandes del año.",
-    "images": ["/images/products/expedition-33-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-action.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": true,
@@ -977,7 +1113,9 @@
     "category": "videojuegos",
     "price": 23000,
     "description": "El nuevo JRPG de los creadores de Persona. Metaphor: ReFantazio con un mundo de fantasía épico, personajes memorables y el combate icónico de Atlus.",
-    "images": ["/images/products/metaphor-refantazio-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-rpg.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -991,7 +1129,9 @@
     "category": "videojuegos",
     "price": 20000,
     "description": "El primer Sonic de mundo abierto. Explora las Starfall Islands, combate titanes y descubre la historia de Sonic en este nuevo capítulo.",
-    "images": ["/images/products/sonic-frontiers-ps5.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-sonic-fnaf.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1005,7 +1145,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "Mario viaja por el mundo en esta aventura 3D de plataformas. Usa la gorra Cappy para poseer enemigos y resolver desafíos creativos.",
-    "images": ["/images/products/super-mario-odyssey-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1019,7 +1161,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "El juego de carreras más popular de Nintendo con 48 pistas, 48 personajes y multijugador local para hasta 4 jugadores.",
-    "images": ["/images/products/mario-kart-8-deluxe-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1033,7 +1177,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "El fighter más grande de Nintendo con más de 80 luchadores. Smash Ultimate con todos los DLC de Fighters Pass incluidos.",
-    "images": ["/images/products/super-smash-bros-ultimate-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1047,7 +1193,9 @@
     "category": "videojuegos",
     "price": 32000,
     "description": "Explora la región de Paldea en mundo abierto en Pokémon Violet. Captura, entrena y lucha con nuevos Pokémon en un mundo sin límites.",
-    "images": ["/images/products/pokemon-violet-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1061,7 +1209,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "La fiesta de Mario más grande con más de 110 minijuegos, nuevos tableros y el modo en línea. Diversión garantizada para toda la familia.",
-    "images": ["/images/products/super-mario-party-jamboree-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1075,7 +1225,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "Los dos primeros Pikmin remasterizados en un solo paquete para Nintendo Switch. Estrategia y exploración con los adorables Pikmin.",
-    "images": ["/images/products/pikmin-1-2-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1089,7 +1241,9 @@
     "category": "videojuegos",
     "price": 38000,
     "description": "La secuela de Breath of the Wild. Explora los cielos sobre Hyrule con el poder de Ultrahand, Fuse y Ascend.",
-    "images": ["/images/products/zelda-totk-nsw.jpg"],
+    "images": [
+      "/images/products/shelf-nsw-nintendo.jpg"
+    ],
     "inStock": true,
     "featured": true,
     "isNew": false,
@@ -1103,7 +1257,9 @@
     "category": "tarjetas",
     "price": 38000,
     "description": "Suscripción de 12 meses a PlayStation Plus Essential con juegos mensuales y multijugador online.",
-    "images": ["/images/products/ps-plus.jpg"],
+    "images": [
+      "/images/placeholder.svg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1117,7 +1273,9 @@
     "category": "tarjetas",
     "price": 16000,
     "description": "Tarjeta de regalo digital para la Nintendo eShop con valor de $25 USD.",
-    "images": ["/images/products/eshop-25.jpg"],
+    "images": [
+      "/images/placeholder.svg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1131,7 +1289,9 @@
     "category": "videojuegos",
     "price": 22000,
     "description": "Crash está de regreso en su aventura de plataformas más ambiciosa. Nuevas dimensiones, personajes jugables y miles de cajas que romper.",
-    "images": ["/images/products/crash-bandicoot-4-ps4.jpg"],
+    "images": [
+      "/images/products/shelf-ps4-skater-predator.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1145,7 +1305,9 @@
     "category": "videojuegos",
     "price": 18000,
     "description": "Cal Kestis inicia su camino como Jedi en este juego de acción y aventura en el universo de Star Wars. Combate de sable de luz y exploración.",
-    "images": ["/images/products/jedi-fallen-order-ps4.jpg"],
+    "images": [
+      "/images/products/shelf-ps4-starwars-megaman.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1159,7 +1321,9 @@
     "category": "videojuegos",
     "price": 10000,
     "description": "La aventura galáctica de Ratchet y Clank basada en la película. Plataformas de acción con armas creativas en el universo PlayStation.",
-    "images": ["/images/products/ratchet-clank-ps4.jpg"],
+    "images": [
+      "/images/products/shelf-ps4-starwars-megaman.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1173,7 +1337,9 @@
     "category": "retro",
     "price": 75000,
     "description": "La consola Super Nintendo Classic Edition con 21 juegos preinstalados incluyendo Star Fox 2, Super Mario World y más clásicos.",
-    "images": ["/images/products/snes-classic.jpg"],
+    "images": [
+      "/images/products/nsw-store-display.jpg"
+    ],
     "inStock": false,
     "featured": false,
     "isNew": false,
@@ -1187,7 +1353,9 @@
     "category": "retro",
     "price": 10000,
     "description": "GTA V para PlayStation 3. El clásico del mundo abierto en su versión original con Los Santos y GTA Online.",
-    "images": ["/images/products/gta-v-ps3.jpg"],
+    "images": [
+      "/images/products/shelf-gtav.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1201,7 +1369,9 @@
     "category": "videojuegos",
     "price": 35000,
     "description": "La colección definitiva de los clásicos Mortal Kombat remasterizados con contenido adicional. Edición Deluxe con todo el contenido incluido.",
-    "images": ["/images/products/mk-legacy-kollection-deluxe.jpg"],
+    "images": [
+      "/images/products/shelf-ps5-terminator-soul-reaver.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": true,
@@ -1215,7 +1385,9 @@
     "category": "coleccionables",
     "price": 18000,
     "description": "Figura amiibo oficial de Link de The Legend of Zelda: Breath of the Wild. Compatible con Switch y Switch 2. Desbloquea contenido especial.",
-    "images": ["/images/products/amiibo-link-botw.jpg"],
+    "images": [
+      "/images/products/ns2-zelda-botw-amiibo-314900.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,
@@ -1229,7 +1401,9 @@
     "category": "coleccionables",
     "price": 35000,
     "description": "Figura deluxe de Crash Bandicoot de NECA con Jet Board. Articulación completa, accesorios intercambiables. Para mayores de 14 años.",
-    "images": ["/images/products/crash-figure-jet-board.jpg"],
+    "images": [
+      "/images/products/dualsense-colors-store.jpg"
+    ],
     "inStock": true,
     "featured": false,
     "isNew": false,

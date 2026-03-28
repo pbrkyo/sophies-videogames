@@ -18,13 +18,7 @@ const heroSlides = [
     image: "/images/hero/crimson-desert-fatalframe.jpg",
     title: "Los mejores títulos",
     subtitle: "recién llegados",
-    description: "Crimson Desert, Fatal Frame II y más. Siempre los últimos lanzamientos.",
-  },
-  {
-    image: "/images/hero/brand-promo.jpg",
-    title: "Más de 15 años",
-    subtitle: "siendo tu tienda",
-    description: "La tienda de videojuegos de confianza en Cartago, Costa Rica.",
+    description: "Crimson Desert, Fatal Frame II Crimson Butterfly Remake y más. Siempre los últimos lanzamientos.",
   },
 ];
 
