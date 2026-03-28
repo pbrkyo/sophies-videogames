@@ -1,5 +1,32 @@
+"use client";
+
 import Link from "next/link";
-import { ArrowRight, Gamepad2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Gamepad2, ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
+
+const heroSlides = [
+  {
+    image: "/images/hero/summer-beach-scene.jpg",
+    title: "Tu universo gamer",
+    subtitle: "en un solo lugar",
+    description: "Consolas, videojuegos, accesorios y coleccionables en Cartago.",
+  },
+  {
+    image: "/images/hero/crimson-desert-fatalframe.jpg",
+    title: "Los mejores títulos",
+    subtitle: "recién llegados",
+    description: "Crimson Desert, Fatal Frame II y más. Siempre los últimos lanzamientos.",
+  },
+  {
+    image: "/images/hero/brand-promo.jpg",
+    title: "Más de 15 años",
+    subtitle: "siendo tu tienda",
+    description: "La tienda de videojuegos de confianza en Cartago, Costa Rica.",
+  },
+];
 
 const stats = [
   { value: "+15", label: "Años de experiencia" },
@@ -7,130 +34,154 @@ const stats = [
   { value: "4.9★", label: "Calificación clientes" },
 ];
 
-const highlights = [
-  { icon: "🎮", text: "Consolas nuevas y usadas" },
-  { icon: "💳", text: "SINPE · Tarjeta · Efectivo" },
-  { icon: "🛡️", text: "Garantía en todos los productos" },
-  { icon: "📦", text: "Retiro en tienda, Cartago" },
-];
-
 export function HeroBanner() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
+  ]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi]);
+
   return (
-    <section className="relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0F0F1A 0%, #1a1a3e 45%, #2038EC 100%)" }}>
-      {/* Subtle mesh gradient overlay */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: "radial-gradient(circle at 20% 50%, #5C94FC22 0%, transparent 50%), radial-gradient(circle at 80% 20%, #7038F844 0%, transparent 40%)",
-        }}
-      />
-
-      {/* Decorative floating orbs */}
-      <div className="absolute top-16 right-16 w-64 h-64 rounded-full opacity-10 blur-3xl" style={{ background: "#5C94FC" }} />
-      <div className="absolute bottom-8 right-1/3 w-48 h-48 rounded-full opacity-8 blur-2xl" style={{ background: "#F8B800" }} />
-
-      <div className="container mx-auto px-4 py-16 md:py-24 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left column — copy */}
-          <div>
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold mb-6 border border-white/20 bg-white/10 text-white backdrop-blur-sm">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#F8B800] badge-pulse" />
-              Tienda física • Cartago, Costa Rica
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
-              Tu universo
-              <br />
-              <span
-                className="inline-block"
-                style={{
-                  background: "linear-gradient(90deg, #F8B800, #FCBC00)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                gamer
-              </span>{" "}
-              <span className="text-white/90">en un</span>
-              <br />
-              solo lugar
-            </h1>
-
-            <p className="mt-5 text-base md:text-lg text-white/65 max-w-md leading-relaxed">
-              Consolas, videojuegos, accesorios y coleccionables. Más de 15 años
-              siendo la tienda de confianza en Cartago.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mt-8">
-              <Link
-                href="/productos"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-[#F8B800]/30"
-                style={{ background: "linear-gradient(135deg, #F8B800, #FCBC00)" }}
-              >
-                <Gamepad2 className="h-4 w-4" />
-                Ver Productos
-              </Link>
-              <Link
-                href="/categorias/consolas"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white border border-white/25 hover:bg-white/10 transition-all hover:-translate-y-0.5 backdrop-blur-sm"
-              >
-                Consolas
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/10">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <p className="text-2xl font-extrabold text-white">{s.value}</p>
-                  <p className="text-xs text-white/50 mt-0.5 font-medium">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right column — highlight grid */}
-          <div className="hidden lg:grid grid-cols-2 gap-4">
-            {highlights.map((h) => (
-              <div
-                key={h.text}
-                className="rounded-2xl p-5 border border-white/10 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition-colors"
-              >
-                <div className="text-3xl mb-3">{h.icon}</div>
-                <p className="text-sm font-semibold text-white/85 leading-snug">{h.text}</p>
-              </div>
-            ))}
-            {/* WhatsApp CTA card */}
+    <section className="relative overflow-hidden">
+      {/* Carousel viewport */}
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {heroSlides.map((slide, i) => (
             <div
-              className="col-span-2 rounded-2xl p-5 border border-[#00A800]/40 flex items-center gap-4"
-              style={{ background: "rgba(0, 168, 0, 0.12)" }}
+              key={i}
+              className="relative flex-[0_0_100%] min-w-0"
             >
+              {/* Background — image with dark overlay, fallback gradient */}
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-xl"
-                style={{ background: "#00A800" }}
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(135deg, #0F0F1A 0%, #1a1a3e 45%, #2038EC 100%)" }}
               >
-                💬
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  priority={i === 0}
+                  className="object-cover"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
+                {/* Gradient overlay on top of the image */}
+                <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(15,15,26,0.88) 0%, rgba(32,56,236,0.60) 60%, rgba(15,15,26,0.75) 100%)" }} />
               </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-bold text-white text-sm">¿Buscas algo específico?</p>
-                <p className="text-xs text-white/55 mt-0.5">Escríbenos — respuesta rápida</p>
+
+              {/* Slide content */}
+              <div className="relative container mx-auto px-4 py-20 md:py-32">
+                <div className="max-w-2xl">
+                  {/* Logo badge */}
+                  <div className="inline-flex items-center gap-3 mb-6">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
+                      style={{ background: "linear-gradient(135deg, #F8B800, #FCBC00)" }}
+                    >
+                      <Gamepad2 className="h-6 w-6 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-extrabold text-white text-lg leading-tight">Sophie&apos;s Videogames</p>
+                      <p className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "#F8B800" }}>
+                        15 Aniversario · Cartago, Costa Rica
+                      </p>
+                    </div>
+                  </div>
+
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
+                    {slide.title}
+                    <br />
+                    <span
+                      style={{
+                        background: "linear-gradient(90deg, #F8B800, #FCBC00)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                      }}
+                    >
+                      {slide.subtitle}
+                    </span>
+                  </h1>
+
+                  <p className="mt-4 text-base md:text-lg text-white/65 max-w-md leading-relaxed">
+                    {slide.description}
+                  </p>
+
+                  {/* CTAs */}
+                  <div className="flex flex-wrap gap-3 mt-8">
+                    <Link
+                      href="/productos"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-[#F8B800]/30"
+                      style={{ background: "linear-gradient(135deg, #F8B800, #FCBC00)" }}
+                    >
+                      <Gamepad2 className="h-4 w-4" />
+                      Ver Productos
+                    </Link>
+                    <Link
+                      href="/categorias/consolas"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white border border-white/25 hover:bg-white/10 transition-all hover:-translate-y-0.5 backdrop-blur-sm"
+                    >
+                      Consolas
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/10">
+                    {stats.map((s) => (
+                      <div key={s.label}>
+                        <p className="text-2xl font-extrabold text-white">{s.value}</p>
+                        <p className="text-xs text-white/50 mt-0.5 font-medium">{s.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <a
-                href="https://wa.me/50672526740"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 px-4 py-2 rounded-xl text-xs font-bold text-white transition-all hover:opacity-90"
-                style={{ background: "#00A800" }}
-              >
-                Escribir
-              </a>
             </div>
-          </div>
+          ))}
         </div>
+      </div>
+
+      {/* Prev / Next arrows */}
+      <button
+        onClick={scrollPrev}
+        aria-label="Anterior"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
+      >
+        <ChevronLeft className="h-5 w-5 text-white" />
+      </button>
+      <button
+        onClick={scrollNext}
+        aria-label="Siguiente"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
+      >
+        <ChevronRight className="h-5 w-5 text-white" />
+      </button>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => scrollTo(i)}
+            aria-label={`Ir a slide ${i + 1}`}
+            className="h-2 rounded-full transition-all duration-300"
+            style={{
+              width: selectedIndex === i ? "24px" : "8px",
+              background: selectedIndex === i ? "#F8B800" : "rgba(255,255,255,0.4)",
+            }}
+          />
+        ))}
       </div>
 
       {/* Bottom wave divider */}
