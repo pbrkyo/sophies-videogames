@@ -6,6 +6,7 @@ import { ShoppingCart, Eye, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/lib/products";
 import { useCartStore } from "@/lib/cart-store";
+import { useLangStore } from "@/lib/lang-store";
 import { formatCRCShort } from "@/lib/format";
 import { useState } from "react";
 
@@ -16,6 +17,7 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const addItem = useCartStore((s) => s.addItem);
   const openCart = useCartStore((s) => s.openCart);
+  const tr = useLangStore((s) => s.tr);
   const [added, setAdded] = useState(false);
 
   function handleAddToCart() {
@@ -42,7 +44,7 @@ export function ProductCard({ product }: ProductCardProps) {
             className="text-[10px] font-extrabold px-2.5 py-1 rounded-full text-white uppercase tracking-wide"
             style={{ background: "#5C94FC" }}
           >
-            Nuevo
+            {tr("new_badge")}
           </span>
         )}
         {discount > 0 && (
@@ -55,7 +57,7 @@ export function ProductCard({ product }: ProductCardProps) {
         )}
         {!product.inStock && (
           <span className="text-[10px] font-extrabold px-2.5 py-1 rounded-full bg-muted text-muted-foreground uppercase tracking-wide">
-            Agotado
+            {tr("out_of_stock")}
           </span>
         )}
       </div>
@@ -78,7 +80,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/8 transition-colors duration-300 flex items-center justify-center">
             <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/95 backdrop-blur-sm text-xs font-bold shadow-lg">
               <Eye className="h-3.5 w-3.5" />
-              Ver detalles
+              {tr("view_details")}
             </span>
           </div>
         </div>
@@ -117,33 +119,33 @@ export function ProductCard({ product }: ProductCardProps) {
             className={`h-1.5 w-1.5 rounded-full ${product.inStock ? "bg-[#00A800]" : "bg-muted-foreground"}`}
           />
           <span className="text-[11px] font-medium text-muted-foreground">
-            {product.inStock ? "En stock" : "Agotado"}
+            {product.inStock ? tr("in_stock") : tr("out_of_stock")}
           </span>
         </div>
 
         {/* Add to cart */}
         <button
-          className="w-full mt-4 py-2.5 rounded-xl text-sm font-bold text-white flex items-center justify-center gap-2 transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full mt-4 min-h-[44px] py-2.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all hover:opacity-90 hover:-translate-y-0.5 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:opacity-50"
           style={{
             background: !product.inStock
-              ? undefined
+              ? "#e5e7eb"
               : added
               ? "linear-gradient(135deg, #00A800, #43D043)"
               : "linear-gradient(135deg, #2038EC, #5C94FC)",
-            backgroundColor: product.inStock ? undefined : "oklch(0.96 0.004 240)",
+            color: !product.inStock ? "#6b7280" : "#ffffff",
           }}
           disabled={!product.inStock || added}
           onClick={handleAddToCart}
         >
           {added ? (
             <>
-              <Check className="h-4 w-4" />
-              ¡Agregado!
+              <Check className="h-4 w-4 shrink-0" />
+              {tr("added")}
             </>
           ) : (
             <>
-              <ShoppingCart className="h-4 w-4" />
-              {product.inStock ? "Agregar al carrito" : "Agotado"}
+              <ShoppingCart className="h-4 w-4 shrink-0" />
+              {product.inStock ? tr("add_to_cart") : tr("out_of_stock")}
             </>
           )}
         </button>

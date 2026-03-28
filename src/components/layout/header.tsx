@@ -1,31 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, Search, Menu, Phone, MessageCircle, Gamepad2 } from "lucide-react";
+import { ShoppingCart, Search, Menu, Phone, MessageCircle, Gamepad2, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCartStore } from "@/lib/cart-store";
+import { useLangStore } from "@/lib/lang-store";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { useState } from "react";
-
-const navLinks = [
-  { href: "/productos", label: "Todos los Productos" },
-  { href: "/categorias/consolas", label: "Consolas" },
-  { href: "/categorias/videojuegos", label: "Videojuegos" },
-  { href: "/categorias/accesorios", label: "Accesorios" },
-  { href: "/categorias/retro", label: "Retro & Usado" },
-  { href: "/metodos-de-pago", label: "Pagos" },
-  { href: "/contacto", label: "Contacto" },
-];
 
 export function Header() {
   const totalItems = useCartStore((s) => s.totalItems());
   const cartOpen = useCartStore((s) => s.isOpen);
   const openCart = useCartStore((s) => s.openCart);
   const closeCart = useCartStore((s) => s.closeCart);
+  const { lang, toggle: toggleLang, tr } = useLangStore();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/productos", label: tr("nav_all") },
+    { href: "/categorias/consolas", label: tr("nav_consoles") },
+    { href: "/categorias/videojuegos", label: tr("nav_games") },
+    { href: "/categorias/accesorios", label: tr("nav_accessories") },
+    { href: "/categorias/retro", label: tr("nav_retro") },
+    { href: "/metodos-de-pago", label: tr("nav_payments") },
+    { href: "/contacto", label: tr("nav_contact") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -54,7 +56,7 @@ export function Header() {
             </a>
           </div>
           <span className="hidden sm:block font-medium text-white/90">
-            🎮 Más de 15 años en Cartago — Lun–Vie 9AM–5:30PM · Sáb 9AM–1PM
+            {tr("announcement")}
           </span>
         </div>
       </div>
@@ -101,7 +103,7 @@ export function Header() {
                   style={{ background: "#00A800" }}
                 >
                   <MessageCircle className="h-4 w-4" />
-                  Escribir por WhatsApp
+                  {tr("nav_whatsapp")}
                 </a>
               </div>
             </SheetContent>
@@ -138,6 +140,15 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2">
+            <button
+              onClick={toggleLang}
+              aria-label="Switch language"
+              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-bold border border-border/60 hover:bg-muted transition-colors shrink-0"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              {lang === "es" ? "EN" : "ES"}
+            </button>
+
             <Button
               variant="ghost"
               size="icon"

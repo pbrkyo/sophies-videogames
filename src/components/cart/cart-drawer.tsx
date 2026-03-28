@@ -7,6 +7,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useCartStore } from "@/lib/cart-store";
+import { useLangStore } from "@/lib/lang-store";
 import { formatCRCShort } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +17,7 @@ interface CartDrawerProps {
 
 export function CartDrawer({ onClose }: CartDrawerProps) {
   const { items, updateQuantity, removeItem, totalPrice } = useCartStore();
+  const tr = useLangStore((s) => s.tr);
 
   if (items.length === 0) {
     return (
@@ -23,16 +25,16 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
         <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mb-4">
           <ShoppingBag className="h-8 w-8 text-muted-foreground" />
         </div>
-        <h3 className="font-semibold text-lg mb-2">Tu carrito está vacío</h3>
+        <h3 className="font-semibold text-lg mb-2">{tr("cart_empty")}</h3>
         <p className="text-sm text-muted-foreground mb-6">
-          Agrega productos para comenzar tu compra
+          {tr("cart_empty_sub")}
         </p>
         <Link
           href="/productos"
           onClick={onClose}
           className={cn(buttonVariants())}
         >
-          Explorar Productos
+          {tr("explore")}
         </Link>
       </div>
     );
@@ -42,7 +44,7 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
     <div className="flex flex-col h-full">
       <div className="p-6 pb-4">
         <h2 className="text-lg font-semibold">
-          Carrito ({items.reduce((s, i) => s + i.quantity, 0)})
+          {tr("cart_title")} ({items.reduce((s, i) => s + i.quantity, 0)})
         </h2>
       </div>
 
@@ -113,13 +115,13 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
 
       <div className="p-6 pt-4 border-t">
         <div className="flex items-center justify-between mb-4">
-          <span className="font-medium">Subtotal</span>
+          <span className="font-medium">{tr("subtotal")}</span>
           <span className="text-lg font-bold">
             {formatCRCShort(totalPrice())}
           </span>
         </div>
         <p className="text-xs text-muted-foreground mb-4">
-          Impuestos y envío calculados al pagar
+          {tr("tax_note")}
         </p>
         <div className="flex flex-col gap-2">
           <Link
@@ -130,14 +132,14 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
               "w-full bg-mario-red hover:bg-mario-red/90"
             )}
           >
-            Proceder al Pago
+            {tr("checkout")}
           </Link>
           <Button
             variant="outline"
             className="w-full"
             onClick={onClose}
           >
-            Seguir Comprando
+            {tr("keep_shopping")}
           </Button>
         </div>
       </div>
