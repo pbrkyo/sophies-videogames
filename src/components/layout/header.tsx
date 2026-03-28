@@ -65,7 +65,7 @@ export function Header() {
 
           {/* Mobile menu */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger className="lg:hidden inline-flex items-center justify-center size-9 rounded-xl hover:bg-muted transition-colors">
+            <SheetTrigger className="lg:hidden inline-flex items-center justify-center size-11 rounded-xl hover:bg-muted transition-colors">
               <Menu className="h-5 w-5" />
             </SheetTrigger>
             <SheetContent side="left" className="w-80 p-0">
@@ -141,14 +141,14 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden size-9 rounded-xl"
+              className="md:hidden size-11 rounded-xl"
               aria-label="Buscar"
             >
               <Search className="h-5 w-5" />
             </Button>
 
             <Sheet open={cartOpen} onOpenChange={(open) => open ? openCart() : closeCart()}>
-              <SheetTrigger className="relative inline-flex items-center justify-center size-9 rounded-xl hover:bg-muted transition-colors">
+              <SheetTrigger className="relative inline-flex items-center justify-center size-11 rounded-xl hover:bg-muted transition-colors">
                 <ShoppingCart className="h-5 w-5" />
                 {totalItems > 0 && (
                   <Badge

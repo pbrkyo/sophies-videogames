@@ -57,8 +57,8 @@ export function ProductFilters({
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-3">
-      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+    <div className="flex flex-wrap items-center gap-2 md:gap-3">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground w-full sm:w-auto">
         <Filter className="h-4 w-4" />
         Filtrar:
       </div>
@@ -67,7 +67,7 @@ export function ProductFilters({
         value={category}
         onValueChange={(v) => handleChange(v, undefined, undefined)}
       >
-        <SelectTrigger className="w-[160px] h-9 text-sm">
+        <SelectTrigger className="w-full sm:w-[160px] h-10 sm:h-9 text-sm">
           <SelectValue placeholder="Categoría" />
         </SelectTrigger>
         <SelectContent>
@@ -84,7 +84,7 @@ export function ProductFilters({
         value={brand}
         onValueChange={(v) => handleChange(undefined, v, undefined)}
       >
-        <SelectTrigger className="w-[140px] h-9 text-sm">
+        <SelectTrigger className="w-full sm:w-[140px] h-10 sm:h-9 text-sm">
           <SelectValue placeholder="Marca" />
         </SelectTrigger>
         <SelectContent>
@@ -101,7 +101,7 @@ export function ProductFilters({
         value={sort}
         onValueChange={(v) => handleChange(undefined, undefined, v)}
       >
-        <SelectTrigger className="w-[160px] h-9 text-sm">
+        <SelectTrigger className="w-full sm:w-[160px] h-10 sm:h-9 text-sm">
           <SelectValue placeholder="Ordenar" />
         </SelectTrigger>
         <SelectContent>
@@ -117,7 +117,7 @@ export function ProductFilters({
           variant="ghost"
           size="sm"
           onClick={clearFilters}
-          className="h-9 text-sm"
+          className="h-10 sm:h-9 text-sm"
         >
           <X className="h-3 w-3 mr-1" />
           Limpiar

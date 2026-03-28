@@ -76,12 +76,12 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="h-7 w-7"
+                    className="h-9 w-9"
                     onClick={() =>
                       updateQuantity(item.product.id, item.quantity - 1)
                     }
                   >
-                    <Minus className="h-3 w-3" />
+                    <Minus className="h-3.5 w-3.5" />
                   </Button>
                   <span className="text-sm font-medium w-6 text-center">
                     {item.quantity}
@@ -89,20 +89,20 @@ export function CartDrawer({ onClose }: CartDrawerProps) {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="h-7 w-7"
+                    className="h-9 w-9"
                     onClick={() =>
                       updateQuantity(item.product.id, item.quantity + 1)
                     }
                   >
-                    <Plus className="h-3 w-3" />
+                    <Plus className="h-3.5 w-3.5" />
                   </Button>
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="h-7 w-7 ml-auto text-destructive"
+                    className="h-9 w-9 ml-auto text-destructive"
                     onClick={() => removeItem(item.product.id)}
                   >
-                    <Trash2 className="h-3 w-3" />
+                    <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>
               </div>

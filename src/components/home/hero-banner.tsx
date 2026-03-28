@@ -74,25 +74,25 @@ export function HeroBanner() {
               </div>
 
               {/* Slide content */}
-              <div className="relative container mx-auto px-4 py-20 md:py-32">
+              <div className="relative container mx-auto px-4 py-12 md:py-20 lg:py-32">
                 <div className="max-w-2xl">
                   {/* Logo badge */}
-                  <div className="inline-flex items-center gap-3 mb-6">
+                  <div className="inline-flex items-center gap-3 mb-4 md:mb-6">
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center shadow-lg"
                       style={{ background: "linear-gradient(135deg, #F8B800, #FCBC00)" }}
                     >
-                      <Gamepad2 className="h-6 w-6 text-black" />
+                      <Gamepad2 className="h-5 w-5 md:h-6 md:w-6 text-black" />
                     </div>
                     <div>
-                      <p className="font-extrabold text-white text-lg leading-tight">Sophie&apos;s Videogames</p>
-                      <p className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "#F8B800" }}>
+                      <p className="font-extrabold text-white text-base md:text-lg leading-tight">Sophie&apos;s Videogames</p>
+                      <p className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest" style={{ color: "#F8B800" }}>
                         15 Aniversario · Cartago, Costa Rica
                       </p>
                     </div>
                   </div>
 
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
+                  <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
                     {slide.title}
                     <br />
                     <span
@@ -107,12 +107,12 @@ export function HeroBanner() {
                     </span>
                   </h1>
 
-                  <p className="mt-4 text-base md:text-lg text-white/65 max-w-md leading-relaxed">
+                  <p className="mt-3 md:mt-4 text-sm md:text-lg text-white/65 max-w-md leading-relaxed">
                     {slide.description}
                   </p>
 
                   {/* CTAs */}
-                  <div className="flex flex-wrap gap-3 mt-8">
+                  <div className="flex flex-wrap gap-3 mt-6 md:mt-8">
                     <Link
                       href="/productos"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-black transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg shadow-[#F8B800]/30"
@@ -131,7 +131,7 @@ export function HeroBanner() {
                   </div>
 
                   {/* Stats */}
-                  <div className="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/10">
+                  <div className="flex flex-wrap gap-6 md:gap-8 mt-8 md:mt-10 pt-6 md:pt-8 border-t border-white/10">
                     {stats.map((s) => (
                       <div key={s.label}>
                         <p className="text-2xl font-extrabold text-white">{s.value}</p>
@@ -150,26 +150,26 @@ export function HeroBanner() {
       <button
         onClick={scrollPrev}
         aria-label="Anterior"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
+        className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
       >
         <ChevronLeft className="h-5 w-5 text-white" />
       </button>
       <button
         onClick={scrollNext}
         aria-label="Siguiente"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
+        className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full flex items-center justify-center bg-white/15 hover:bg-white/30 backdrop-blur-sm border border-white/20 transition-all"
       >
         <ChevronRight className="h-5 w-5 text-white" />
       </button>
 
       {/* Dot indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2 p-2">
         {heroSlides.map((_, i) => (
           <button
             key={i}
             onClick={() => scrollTo(i)}
             aria-label={`Ir a slide ${i + 1}`}
-            className="h-2 rounded-full transition-all duration-300"
+            className="h-3 rounded-full transition-all duration-300"
             style={{
               width: selectedIndex === i ? "24px" : "8px",
               background: selectedIndex === i ? "#F8B800" : "rgba(255,255,255,0.4)",

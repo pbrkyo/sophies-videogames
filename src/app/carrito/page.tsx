@@ -82,12 +82,12 @@ export default function CarritoPage() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-10 w-10"
                         onClick={() =>
                           updateQuantity(item.product.id, item.quantity - 1)
                         }
                       >
-                        <Minus className="h-3 w-3" />
+                        <Minus className="h-4 w-4" />
                       </Button>
                       <span className="font-medium w-8 text-center">
                         {item.quantity}
@@ -95,12 +95,12 @@ export default function CarritoPage() {
                       <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8"
+                        className="h-10 w-10"
                         onClick={() =>
                           updateQuantity(item.product.id, item.quantity + 1)
                         }
                       >
-                        <Plus className="h-3 w-3" />
+                        <Plus className="h-4 w-4" />
                       </Button>
                     </div>
                     <span className="text-sm font-semibold ml-auto">
@@ -109,7 +109,7 @@ export default function CarritoPage() {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="h-8 w-8 text-destructive"
+                      className="h-10 w-10 text-destructive"
                       onClick={() => removeItem(item.product.id)}
                     >
                       <Trash2 className="h-4 w-4" />
@@ -133,7 +133,7 @@ export default function CarritoPage() {
 
         {/* Summary */}
         <div>
-          <Card className="sticky top-32">
+          <Card className="lg:sticky lg:top-24">
             <CardContent className="p-6">
               <h2 className="font-semibold text-lg mb-4">
                 Resumen del Pedido
